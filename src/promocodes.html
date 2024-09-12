@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promo Codes List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header, footer {
+            background-color: #f8f8f8;
+            padding: 10px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+        }
+        .promo-code {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Promo Codes Website</h1>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="promocodes.html">Promo Codes</a> |
+        <a href="promotion.html">Promotion</a> |
+        <a href="category.html">Category</a>
+    </nav>
+</header>
+<div class="content">
+    <h2>Promo Codes List</h2>
+    <div id="promo-codes-container"></div>
+</div>
+<footer>
+    <p>&copy; 2023 Promo Codes Website</p>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const promoCodes = [
+            { code: 'SAVE10', description: 'Save 10% on your next purchase' },
+            { code: 'FREESHIP', description: 'Free shipping on orders over $50' },
+            { code: 'WELCOME20', description: '20% off for new customers' }
+        ];
+
+        const container = document.getElementById('promo-codes-container');
+
+        promoCodes.forEach(promo => {
+            const promoDiv = document.createElement('div');
+            promoDiv.className = 'promo-code';
+            promoDiv.innerHTML = `<strong>${promo.code}</strong>: ${promo.description}`;
+            container.appendChild(promoDiv);
+        });
+    });
+</script>
+</body>
+</html>
